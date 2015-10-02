@@ -1,0 +1,343 @@
+* {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+}
+
+
+@font-face {
+		font-family: 'DinProBlack';
+		src: local('?'), url('../../fonts/dinproblack.ttf') format('truetype');
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'DinProBold';
+		src: local('?'), url('../../fonts/dinprobold.ttf') format('truetype');
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'DinProMed';
+		src: local('?'), url('../../fonts/dinpromedium.ttf') format('truetype');
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'DinProReg';
+		src: local('?'), url('../../fonts/dinproregular.ttf') format('truetype');
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'DinProLite';
+		src: url('../../fonts/dinprolight.ttf') format('truetype');
+		/**src: local('?'), url('../fonts/dinprolight.ttf') format('truetype');**/
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'HelveNeuLig';
+		src: url('../../fonts/HelveNeuLig.ttf') format('truetype');
+		/**src: local('?'), url('../fonts/dinprolight.ttf') format('truetype');**/
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+
+
+@font-face {
+		font-family: 'HelveNeuConBol';
+		src: url('../../fonts/HelveNeuConBol.ttf') format('truetype');
+		/**src: local('?'), url('../fonts/dinprolight.ttf') format('truetype');**/
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'HelveNeuCon';
+		src: url('../../fonts/helvetica-neue-condensed.ttf') format('truetype');
+		/**src: local('?'), url('../fonts/dinprolight.ttf') format('truetype');**/
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'NeutraDispDrafting';
+		src: url('../../fonts/NeutraDisp-Drafting.ttf') format('truetype');
+		/**src: local('?'), url('../fonts/dinprolight.ttf') format('truetype');**/
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'Shruti';
+		src: url('../../fonts/Shruti.ttf') format('truetype');
+		/**src: local('?'), url('../fonts/dinprolight.ttf') format('truetype');**/
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+@font-face {
+		font-family: 'TwCenMTRegular';
+		src: url('../../fonts/TwCenMT-Regular.ttf') format('truetype');
+		/**src: local('?'), url('../fonts/dinprolight.ttf') format('truetype');**/
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+
+
+#fullscreen {
+    box-sizing:content-box;
+    font-family: "arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width:100%;
+    font-size:14px;
+   // border:1px solid white;
+    height:100%;
+    position:relative;
+    //overflow:hidden;
+    background-color:rgba(0,0,0,1.0);
+  //  background-image:url(images/bg.jpg);
+    background-size:auto 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+#navigation {
+    background-color:red;
+
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+
+  background-color: rgba(0,100,200,1.0);
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background-color: rgba(0,100,200,.5);
+ // background-color: blue;
+}
+
+@media all and (max-width: 800px) and (min-width: 600px) {
+  .media_name {content:"ipad";}
+  .navigation {
+    justify-content: space-around;
+  }
+  .aside { flex: 1 auto; }
+  .aside-1 { order: 1; }
+  .article1    { order: 2; }
+  .aside-2 { order: 3; }
+
+  .aside-3 { order: 1; }
+  .article2    { order: 2; }
+  .aside-4 { order: 3; }
+}
+
+@media all and (min-width: 800px) {
+  .media_name {content:"computer";}
+
+  .section1    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .article1    { flex-basis:2;
+      order: 2; }
+  .aside-2 { order: 3; }
+
+  .section3    { flex: 3 0px; }
+  .aside-3 { order: 1; }
+  .article2    { flex-basis:2;order: 2; }
+  .aside-4 { order: 3; }
+  .footer  { order: 4; }
+}
+
+@media all and (max-width: 600px) {
+  .media_name {content:"iphone";}
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  .aside { flex: 1 auto; }
+  .aside-1 { order: 1; }
+  .article1    { order: 2; }
+  .aside-2 { order: 3; }
+
+  .aside-3 { order: 1; }
+  .article2    { order: 2; }
+  .aside-4 { order: 3; }
+
+}
+
+
+
+
+.wrapperin {
+  font-size:14px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row nowrap;
+
+  font-weight: bold;
+  text-align: center;
+}
+.wrapperin > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+.wrapper {
+  font-size:14px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background-color: tomato;
+}
+
+.footer {
+  background-color: lightgreen;
+  height:40px;
+  width:100%;
+}
+
+.section1 {
+  text-align: left;
+  background-color: deepskyblue;
+}
+
+.section2 {
+  text-align: center;
+  background-color: orange;
+}
+
+.section3 {
+  text-align: left;
+  background-color: orange;
+}
+
+.aside {
+  .aside { flex: 1 auto; }
+}
+
+.aside-1 {
+
+  background: gold;
+}
+
+.aside-2 {
+  background-color: hotpink;
+}
+
+.aside-3 {
+  background-color: blue;
+}
+
+.aside-4 {
+  background-color: cyan;
+}
+
+.splasher1 {
+    background-color:rgba(0,0,0,1.0);
+    width:100%;
+    height:400px;
+    background-image:url(images/sunset.jpg);
+    background-size:cover;
+
+
+}
+
+
+.splasher2 {
+    background-color:rgba(0,0,0,1.0);
+    width:100%;
+    height:400px;
+    background-image:url(images/imgres.jpg);
+    background-size:cover;
+
+
+}
+
+
+body {
+  padding: 2em;
+}
+
+bheader {
+    box-sizing:border-box;
+    width:100%;
+
+    background-color:rgba(255,120,40,1.0);
+    height:40px;
+
+}
+
+.headernav {
+    color:rgba(255,255,255,1.0);
+    flex-basis:auto;
+    background-color:rgba(100,50,10,1);
+    padding:5px;
+    align-text:center;
+    font-size:18px;
+    flex-grow:1;
+    width:100px;
+
+    height:30px;
+    margin:auto;
+
+
+}
+
+
+.mainpage {
+
+
+
+}
+
+
+bfooter {
+    box-sizing:border-box;
+    height:40px;
+
+
+
+
+}
+
+.footernav {
+
+
+
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Main</title>
+
+    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="dom.css">
+    <link rel="stylesheet" href="edit.css">
+
+    <!-- For the content -->
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "editor"},
+                    "proj": {"@": "proj"},
+                    "css": {"@": "css"},
+                    "dom": {"#": "dom-element"},
+                    "content": {"@": "content"},
+                    "_editInspectorPanel": {"#": "edit-inspector-panel"},
+                    "_editPalettePanel": {"#": "edit-palette-panel"}
+                }
+            },
+            "proj": {
+                "value": {"#": "proj"},
+                "properties": {
+                    "identifier": "proj"
+                },
+                "listeners": [
+                    {
+                        "type": "click",
+                        "listener": {"@": "owner"},
+                        "capture": false
+                    }
+                ]
+
+            },
+            "css": {
+                "value": {"#": "css"},
+                "properties": {
+                    "identifier": "css"
+                }
+            },
+            "editInspectorElement": {
+                "value": {"#": "css"},
+                "properties": {
+                    "identifier": "css"
+                }
+            },
+
+          "content": {
+                "value": {"#": "content"},
+                "properties": {
+                    "identifier": "content"
+                }
+            },
+            "editInspectorOpen": {
+              "prototype":"montage/ui/button.reel",
+              "properties": {
+                  "element": {"#": "edit-inspector-open"}
+              },
+              "listeners": [
+                  {
+                      "type": "action",
+                      "listener": {"@": "owner"},
+                      "capture": false
+                  }
+              ]
+            },
+            "editPaletteOpen": {
+              "prototype":"montage/ui/button.reel",
+              "properties": {
+                  "element": {"#": "edit-palette-open"}
+              },
+              "listeners": [
+                  {
+                      "type": "action",
+                      "listener": {"@": "owner"},
+                      "capture": false
+                  }
+              ]
+            },
+            "editInspectorClose": {
+              "prototype":"montage/ui/button.reel",
+              "properties": {
+                  "element": {"#": "edit-inspector-close"}
+              },
+              "listeners": [
+                  {
+                      "type": "action",
+                      "listener": {"@": "owner"},
+                      "capture": false
+                  }
+              ]
+            },
+            "editPaletteClose": {
+              "prototype":"montage/ui/button.reel",
+              "properties": {
+                  "element": {"#": "edit-palette-close"}
+              },
+              "listeners": [
+                  {
+                      "type": "action",
+                      "listener": {"@": "owner"},
+                      "capture": false
+                  }
+              ]
+            }
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="editor" class="Editor">
+        <div id="edit_proj" data-montage-id="proj" class = "edit_proj edit_pane">
+          <div name='edit' class='edit_title'><span >PROJ</span></div>;
+        </div>
+
+        <div id="edit_css" data-montage-id="css" class = "edit_css edit_pane">
+          <div name='edit' class='edit_title'><span >CSS</span></div>
+          <input class=css_search onkeyup='CSS.search(this)' value='Search'/>
+        </div>
+
+        <div id="edit_dom" data-montage-id="dom-element" class = "edit_dom edit_pane">
+          <div name='edit' class='edit_title'><span >DOM</span></div>
+        </div>
+
+        <div id="edit_live" data-montage-id="live" class = "edit_live edit_pane">
+          <div name='edit' class='edit_title'><span >LIVE</span></div>
+          <div id=edit_device_cont>
+            <div id=edit_phone_land onClick="EDIT.format(0)" class=format></div>
+            <div id=edit_phone_port onClick="EDIT.format(1)" class=format></div>
+            <div id=edit_tab_land onClick="EDIT.format(2)" class=format></div>
+            <div id=edit_tab_port onClick="EDIT.format(3)" class=format></div>
+            <div id=edit_comp onClick="EDIT.format(4)" class='format on'></div>
+            <div id=edit_tv onClick="EDIT.format(5)" class=format></div>
+          </div>
+          <div id='edit_live_cont' >
+            <div id='edit_live_device'>
+              <div id='edit_live_clip'>
+                <div id='fullscreen' data-montage-id="content">
+
+                	<!--div class="wrapper"-->
+                	  <header id=sec0 class="header">
+                		 <ul class="navigation">
+                		   <li><a href="#sec0">Home</a></li>
+                		   <li><a href="#sec2">About</a></li>
+                		   <li><a href="#sec3">Products</a></li>
+                		   <li><a href="#sec4">Contact</a></li>
+                		</ul>
+
+                	  </header>
+                	  <section id=sec1 class=section2>
+                	  	  <div class='splasher1'>
+                	  	  </div>
+                	  </section>
+
+                	  <section id='sec2' class=section1>
+                	  <div class='wrapperin'>
+                	  <article class="article1">
+                		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                	  </article>
+                	  <aside class="aside aside-1">Aside 1</aside>
+                	  <aside class="aside aside-2">Aside 2</aside>
+                	  </div>
+                	  </section>
+                	  <section id=sec3 class=section2>
+                	  	  <div class='splasher2'>
+                	  	  </div>
+                	  </section>
+                	   <section id=sec4 class=section3>
+                	       <div class='wrapperin'>
+                	  	  <article class="article2">
+                	  		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                	  	  </article>
+                	  	  <aside class="aside aside-3">Aside 3</aside>
+                	  	  <aside class="aside aside-4">Aside 4</aside>
+                	  	  </div>
+                	  </section>
+                	  <footer class="footer">Footer</footer>
+                	<!--/div-->
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="edit_insp" data-montage-id="edit-inspector-panel" class="edit_insp edit_rpane off">
+          <div name="edit" data-montage-id="edit-inspector-close" class='edit_title'><span>INFO</span></div>
+        </div>
+        <div id="edit_pale" data-montage-id="edit-palette-panel" class="edit_pale edit_rpane off">
+          <div name="edit" data-montage-id="edit-palette-close" class='edit_title'><span>PALETTE</span></div>
+        </div>
+        <div id="edit_dumb" data-montage-id="edit-dumb" class="edit_dumb edit_pane">
+          <div id='edit_side_insp' data-montage-id="edit-inspector-open" name='hedit' class='hedit_title'>
+            <span>&nbsp;&nbsp;INFO&nbsp;&nbsp;</span>
+          </div>
+          <div id=edit_side_pale name='hedit' data-montage-id="edit-palette-open" class='hedit_title'>
+            <span >&nbsp;&nbsp;PALETTE&nbsp;&nbsp;</span>
+          </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

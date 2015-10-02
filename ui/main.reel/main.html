@@ -12,11 +12,31 @@
                 "properties": {
                     "element": {"#": "main"}
                 }
+            },
+            "editor": {
+              "prototype":"ui/editor.reel",
+              "properties": {
+                  "element": {"#": "editor"}
+              }
             }
         }
     </script>
+
+    <!--
+    ,
+    "dummyApp": {
+      "prototype":"ui/dummy-app.reel",
+      "properties": {
+          "element": {"#": "dummy-app"}
+      }
+    }
+    -->
+
 </head>
 <body>
-    <div data-montage-id="main" data-montage-skin="light" class="Main"></div>
+    <div data-montage-id="main" class="Main">
+      <div data-montage-id="editor" class=""></div>
+      <div data-montage-id="dummy-app" class=""></div>
+    </div>
 </body>
 </html>

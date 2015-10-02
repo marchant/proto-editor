@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<title>TrueType font embedding test</title>
+<style type="text/css">
+	body {
+		font-size:48px;
+		margin:.5em 1em;
+		font-family:'DinPro Black',serif;
+		text-align:center;
+	}
+	@font-face {
+		font-family: 'DinPro Black';
+		src: local('?'), url('dinproblack.ttf') format('truetype');
+		/**src: local('?'), url('fonts/chunkfive-roman-webfont.woff') format('woff'), url('dinproblack.ttf') format('truetype');**/
+	}
+</style>
+</head>
+<body>
+<p>This should be a Chunky font, not a serif.</p>
+</body>
+</html>

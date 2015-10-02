@@ -7,12 +7,7 @@ var Component = require("montage/ui/component").Component;
  * @class Main
  * @extends Component
  */
-exports.Main = Component.specialize(/** @lends Main# */ {
-    constructor: {
-        value: function Main() {
-            this.super();
-        }
-    },
+exports.DummyApp = Component.specialize(/** @lends Main# */ {
     enterDocument: {
       value: function(firstTime) {
 
